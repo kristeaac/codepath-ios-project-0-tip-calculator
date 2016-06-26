@@ -20,7 +20,17 @@ class TipViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         tipControl.selectedSegmentIndex = defaultTipIndex()
-
+        setupLastBillAmount()
+    }
+    
+    private func setupLastBillAmount() {
+        let now = NSDate()
+        let lastLoaded = SettingsHelper.getLastLoaded()
+        var billAmount = ""
+        if lastLoaded != nil && now.timeIntervalSinceDate(lastLoaded) / 60 < 10 {
+            billAmount = String(format: "%.2f", SettingsHelper.getBillAmount())
+        }
+        billField.text = billAmount
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -41,7 +51,13 @@ class TipViewController: UIViewController {
             return 0
         }
     }
-
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        SettingsHelper.setBillAmount(billAmount())
+        SettingsHelper.markLastLoaded()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -57,12 +73,16 @@ class TipViewController: UIViewController {
     }
     
     private func calculateTip() {
-        var billAmount = NSString(string: billField.text!).doubleValue
-        var tip = billAmount * tipPercentage()
-        var total = billAmount + tip
+        var amount = billAmount()
+        var tip = amount * tipPercentage()
+        var total = amount + tip
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+    }
+    
+    private func billAmount() -> Double {
+        return NSString(string: billField.text!).doubleValue
     }
 
     @IBAction func onTap(sender: AnyObject) {

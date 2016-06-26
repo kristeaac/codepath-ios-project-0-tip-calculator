@@ -9,6 +9,8 @@
 import Foundation
 
 private let defaultTipPercentageKey: String = "default_tip_percentage"
+private let billAmountKey: String = "bill_amount"
+private let lastLoadedKey: String = "last_loaded"
 
 struct SettingsHelper {
     
@@ -21,6 +23,29 @@ struct SettingsHelper {
     static func getDefaultTipPercentage() -> Double {
         let defaults = NSUserDefaults.standardUserDefaults()
         return defaults.doubleForKey(defaultTipPercentageKey)
+    }
+    
+    static func setBillAmount(billAmount: Double) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setDouble(billAmount, forKey: billAmountKey)
+        defaults.synchronize()
+    }
+    
+    static func getBillAmount() -> Double {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.doubleForKey(billAmountKey)
+    }
+    
+    static func markLastLoaded() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(NSDate(), forKey: lastLoadedKey)
+        defaults.synchronize()
+    }
+    
+    static func getLastLoaded() -> NSDate! {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let blah = defaults.objectForKey(lastLoadedKey) as? NSDate
+        return blah
     }
     
 }
