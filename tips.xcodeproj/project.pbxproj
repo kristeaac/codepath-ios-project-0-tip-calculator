@@ -14,6 +14,7 @@
 		3E50F2181D1F147A0055C123 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E50F2161D1F147A0055C123 /* LaunchScreen.xib */; };
 		3E50F2241D1F147A0055C123 /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E50F2231D1F147A0055C123 /* tipsTests.swift */; };
 		3E50F22E1D1F4CA70055C123 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E50F22D1D1F4CA70055C123 /* SettingsViewController.swift */; };
+		3E50F2301D1F58A60055C123 /* SettingsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E50F22F1D1F58A60055C123 /* SettingsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3E50F2221D1F147A0055C123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E50F2231D1F147A0055C123 /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
 		3E50F22D1D1F4CA70055C123 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3E50F22F1D1F58A60055C123 /* SettingsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				3E50F20F1D1F147A0055C123 /* ViewController.swift */,
 				3E50F2111D1F147A0055C123 /* Main.storyboard */,
 				3E50F22D1D1F4CA70055C123 /* SettingsViewController.swift */,
+				3E50F22F1D1F58A60055C123 /* SettingsHelper.swift */,
 				3E50F2141D1F147A0055C123 /* Images.xcassets */,
 				3E50F2161D1F147A0055C123 /* LaunchScreen.xib */,
 				3E50F20B1D1F147A0055C123 /* Supporting Files */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E50F2301D1F58A60055C123 /* SettingsHelper.swift in Sources */,
 				3E50F2101D1F147A0055C123 /* ViewController.swift in Sources */,
 				3E50F20E1D1F147A0055C123 /* AppDelegate.swift in Sources */,
 				3E50F22E1D1F4CA70055C123 /* SettingsViewController.swift in Sources */,
