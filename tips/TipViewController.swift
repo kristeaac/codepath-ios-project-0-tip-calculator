@@ -22,15 +22,17 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var totalTextLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var totalLabelYConstraint: NSLayoutConstraint!
-    @IBOutlet weak var dividerYConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var fieldsViewYConstraint: NSLayoutConstraint!
+   
     // original Y positions
     var tipControlYConstant: CGFloat!
     var tipTextYConstant: CGFloat!
     var tipLabelYConstant: CGFloat!
     var totalTextLabelYConstant: CGFloat!
     var totalLabelYConstant: CGFloat!
-    var dividerYConstant: CGFloat!
+    var fieldsViewYConstant: CGFloat!
+
+    var needToRevealFields = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,7 @@ class TipViewController: UIViewController {
         calculateTip()
         if billAmount() == 0.0 {
             hideFields()
+            needToRevealFields = true
         }
     }
 
@@ -59,9 +62,10 @@ class TipViewController: UIViewController {
         
         totalLabelYConstant = totalLabelYConstraint.constant
         totalLabelYConstraint.constant = self.view.bounds.size.height
-        
-        dividerYConstant = dividerYConstraint.constant
-        dividerYConstraint.constant = self.view.bounds.size.height
+
+        fieldsViewYConstant = fieldsViewYConstraint.constant
+        fieldsViewYConstraint.constant = self.view.bounds.size.height
+
     }
     
     private func revealFields() {
@@ -71,7 +75,8 @@ class TipViewController: UIViewController {
             self.tipLabelYConstraint.constant = self.tipLabelYConstant
             self.totalTextLabelYConstraint.constant = self.totalTextLabelYConstant
             self.totalLabelYConstraint.constant = self.totalLabelYConstant
-            self.dividerYConstraint.constant = self.dividerYConstant
+            self.fieldsViewYConstraint.constant = self.fieldsViewYConstant
+
             self.view.layoutIfNeeded()
         }
     }
@@ -79,11 +84,13 @@ class TipViewController: UIViewController {
     private func setupBillAmount() {
         let now = NSDate()
         let lastLoaded = SettingsHelper.getLastLoaded()
-        var billAmount = ""
+        var amount = ""
         if lastLoaded != nil && now.timeIntervalSinceDate(lastLoaded) / 60 < 10 {
-            billAmount = String(format: "%.2f", SettingsHelper.getBillAmount())
+            if (SettingsHelper.getBillAmount() > 0.0) {
+                amount = String(format: "%.2f", SettingsHelper.getBillAmount())
+            }
         }
-        billField.text = billAmount
+        billField.text = amount
         billField.becomeFirstResponder()
     }
     
@@ -119,7 +126,9 @@ class TipViewController: UIViewController {
 
     @IBAction func onEditingChange(sender: AnyObject) {
         calculateTip()
-        revealFields()
+        if needToRevealFields == true {
+            revealFields()
+        }
     }
     
     private func tipPercentage() -> Double {

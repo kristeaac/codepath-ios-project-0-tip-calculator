@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="12E-pl-Mxp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="12E-pl-Mxp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,10 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94o-qu-CvZ">
+                                <rect key="frame" x="0.0" y="172" width="320" height="352"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94o-qu-CvZ" secondAttribute="height" multiplier="10:11" id="1JP-CD-8fD"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X18-iL-5AK">
-                                <rect key="frame" x="16" y="124" width="24" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="16" y="191" width="66" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Tq-zvo">
@@ -28,20 +36,20 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="wyO-1K-Zl3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-oz-msx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-oz-msx">
                                 <rect key="frame" x="196" y="223" width="108" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ka-Rd-9EP">
-                                <rect key="frame" x="135" y="124" width="169" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="135" y="191" width="169" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYe-Pq-deZ">
@@ -54,23 +62,15 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
+                                <color key="tintColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="V3p-dj-4eN"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bill Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oal-Oi-Zzc">
-                                <rect key="frame" x="16" y="72" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYr-lN-fLC">
-                                <rect key="frame" x="16" y="187" width="288" height="4"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="right" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-jd-705">
-                                <rect key="frame" x="135" y="72" width="169" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="100.00" placeholder="$0.00" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-jd-705">
+                                <rect key="frame" x="0.0" y="72" width="320" height="101"/>
+                                <color key="textColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="6Rw-vj-iPu"/>
@@ -78,24 +78,27 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8m7-xV-VAz" secondAttribute="centerX" id="0Ot-QT-YhQ"/>
                             <constraint firstItem="8m7-xV-VAz" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="220" id="2Dx-F5-yOi"/>
-                            <constraint firstItem="rYr-lN-fLC" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6eA-Sv-BDd"/>
                             <constraint firstItem="8m7-xV-VAz" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="7iR-JV-N9L"/>
-                            <constraint firstItem="TNV-jd-705" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="BfL-fp-IBq"/>
                             <constraint firstItem="Fy7-Tq-zvo" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="159" id="GDU-de-1BR"/>
-                            <constraint firstItem="rYr-lN-fLC" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="123" id="Kgp-oE-RQL"/>
-                            <constraint firstItem="TNV-jd-705" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Psg-SX-TS0"/>
+                            <constraint firstItem="94o-qu-CvZ" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="108" id="M2l-Kb-DwT"/>
+                            <constraint firstAttribute="centerX" secondItem="TNV-jd-705" secondAttribute="centerX" id="Oyt-U6-jLy"/>
+                            <constraint firstItem="x8B-er-nfa" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="bottom" id="RTr-c2-oW0"/>
+                            <constraint firstItem="TNV-jd-705" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="RWQ-nm-bhD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TNV-jd-705" secondAttribute="trailing" constant="-16" id="SJa-0N-tT2"/>
                             <constraint firstItem="8m7-xV-VAz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="SYu-xA-8uf"/>
-                            <constraint firstItem="oal-Oi-Zzc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="TEO-Xf-xfc"/>
                             <constraint firstItem="sJo-oz-msx" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="159" id="TGH-Iu-su0"/>
-                            <constraint firstItem="0ka-Rd-9EP" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="60" id="UVp-24-vBm"/>
-                            <constraint firstItem="X18-iL-5AK" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="60" id="fji-kG-THI"/>
+                            <constraint firstItem="0ka-Rd-9EP" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="127" id="UVp-24-vBm"/>
+                            <constraint firstItem="TNV-jd-705" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="8" id="f1Z-Ba-4Lb"/>
+                            <constraint firstItem="X18-iL-5AK" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="127" id="fji-kG-THI"/>
                             <constraint firstItem="sJo-oz-msx" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ghs-2m-edT"/>
-                            <constraint firstItem="rYr-lN-fLC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ibY-86-8cJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="94o-qu-CvZ" secondAttribute="trailing" constant="-16" id="mo4-ja-sWk"/>
+                            <constraint firstItem="94o-qu-CvZ" firstAttribute="top" secondItem="TNV-jd-705" secondAttribute="bottom" constant="-1" id="pAK-Tp-yhz"/>
+                            <constraint firstItem="94o-qu-CvZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="rwl-dg-qbu"/>
                             <constraint firstItem="0ka-Rd-9EP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ugN-f1-uEZ"/>
                         </constraints>
                         <connections>
@@ -113,7 +116,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billField" destination="TNV-jd-705" id="TAb-zD-FaD"/>
-                        <outlet property="dividerYConstraint" destination="Kgp-oE-RQL" id="Fq7-Jb-z1V"/>
+                        <outlet property="fieldsViewYConstraint" destination="M2l-Kb-DwT" id="8qK-OG-V2R"/>
                         <outlet property="tipControl" destination="8m7-xV-VAz" id="9y6-Au-i3A"/>
                         <outlet property="tipControlYConstraint" destination="2Dx-F5-yOi" id="gJp-C5-8xO"/>
                         <outlet property="tipLabel" destination="0ka-Rd-9EP" id="vCD-td-tbN"/>
@@ -145,28 +148,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Default Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-DB-w16">
-                                <rect key="frame" x="16" y="72" width="148" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-DB-w16">
+                                <rect key="frame" x="47" y="79" width="227" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-6l-eFr">
-                                <rect key="frame" x="16" y="101" width="288" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-6l-eFr">
+                                <rect key="frame" x="16" y="114" width="288" height="29"/>
                                 <segments>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
+                                <color key="tintColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onValueChanged:" destination="dye-tB-Doa" eventType="valueChanged" id="fTi-8b-o7I"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="9aA-ui-cK3"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="trailing" secondItem="GQD-Yx-vCw" secondAttribute="trailingMargin" id="GWe-nB-F8E"/>
+                            <constraint firstItem="6ss-6l-eFr" firstAttribute="top" secondItem="oTf-DB-w16" secondAttribute="bottom" constant="14" id="HI5-LF-3Iq"/>
+                            <constraint firstAttribute="centerX" secondItem="oTf-DB-w16" secondAttribute="centerX" id="Q9o-na-8Cg"/>
+                            <constraint firstItem="oTf-DB-w16" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="15" id="u7x-LS-eox"/>
                             <constraint firstItem="oTf-DB-w16" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="xvd-xS-Fz0"/>
                         </constraints>
                     </view>
@@ -203,4 +210,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
 </document>
