@@ -17,10 +17,11 @@ class TipViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tipLabel.text = "$0.00"
-        totalLabel.text = "$0.00"
+        tipLabel.text = localCurrency(0.0)
+        totalLabel.text = localCurrency(0.0)
         tipControl.selectedSegmentIndex = defaultTipIndex()
         setupBillAmount()
+        calculateTip()
     }
     
     private func setupBillAmount() {
@@ -78,8 +79,15 @@ class TipViewController: UIViewController {
         var tip = amount * tipPercentage()
         var total = amount + tip
         
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = localCurrency(tip)
+        totalLabel.text = localCurrency(total)
+    }
+    
+    private func localCurrency(amount: Double) -> String {
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale.currentLocale()
+        return formatter.stringFromNumber(amount)!
     }
     
     private func billAmount() -> Double {
