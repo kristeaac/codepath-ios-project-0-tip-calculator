@@ -20,10 +20,10 @@ class TipViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         tipControl.selectedSegmentIndex = defaultTipIndex()
-        setupLastBillAmount()
+        setupBillAmount()
     }
     
-    private func setupLastBillAmount() {
+    private func setupBillAmount() {
         let now = NSDate()
         let lastLoaded = SettingsHelper.getLastLoaded()
         var billAmount = ""
@@ -31,6 +31,7 @@ class TipViewController: UIViewController {
             billAmount = String(format: "%.2f", SettingsHelper.getBillAmount())
         }
         billField.text = billAmount
+        billField.becomeFirstResponder()
     }
     
     override func viewWillAppear(animated: Bool) {
