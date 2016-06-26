@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Tip Calculator-->
+        <!--Tippy-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="TipViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="TipViewController" customModule="Tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3VT-z9-Yjs"/>
                         <viewControllerLayoutGuide type="bottom" id="x8B-er-nfa"/>
@@ -94,7 +94,7 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="s9x-tC-0YJ">
+                    <navigationItem key="navigationItem" title="Tippy" id="s9x-tC-0YJ">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="2hH-Aq-3Vm">
                             <connections>
                                 <segue destination="dye-tB-Doa" kind="push" id="dKm-ew-cO6"/>
@@ -121,7 +121,7 @@
         <!--Settings View Controller-->
         <scene sceneID="ZGC-em-KxL">
             <objects>
-                <viewController id="dye-tB-Doa" customClass="SettingsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dye-tB-Doa" customClass="SettingsViewController" customModule="Tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G1y-rd-QIy"/>
                         <viewControllerLayoutGuide type="bottom" id="d4Q-Tv-WGM"/>
