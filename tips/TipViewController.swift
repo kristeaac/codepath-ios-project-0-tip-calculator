@@ -10,11 +10,28 @@ import UIKit
 
 class TipViewController: UIViewController {
 
+    // views
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    // constraints
+    @IBOutlet weak var tipControlYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tipTextYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tipLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var totalTextLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var totalLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var dividerYConstraint: NSLayoutConstraint!
+    
+    // original Y positions
+    var tipControlYConstant: CGFloat!
+    var tipTextYConstant: CGFloat!
+    var tipLabelYConstant: CGFloat!
+    var totalTextLabelYConstant: CGFloat!
+    var totalLabelYConstant: CGFloat!
+    var dividerYConstant: CGFloat!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tipLabel.text = localCurrency(0.0)
@@ -22,6 +39,41 @@ class TipViewController: UIViewController {
         tipControl.selectedSegmentIndex = defaultTipIndex()
         setupBillAmount()
         calculateTip()
+        if billAmount() == 0.0 {
+            hideFields()
+        }
+    }
+
+    private func hideFields() {
+        tipControlYConstant = tipControlYConstraint.constant
+        tipControlYConstraint.constant = self.view.bounds.size.height
+        
+        tipTextYConstant = tipTextYConstraint.constant
+        tipTextYConstraint.constant = self.view.bounds.size.height
+        
+        tipLabelYConstant = tipLabelYConstraint.constant
+        tipLabelYConstraint.constant = self.view.bounds.size.height
+        
+        totalTextLabelYConstant = totalTextLabelYConstraint.constant
+        totalTextLabelYConstraint.constant = self.view.bounds.size.height
+        
+        totalLabelYConstant = totalLabelYConstraint.constant
+        totalLabelYConstraint.constant = self.view.bounds.size.height
+        
+        dividerYConstant = dividerYConstraint.constant
+        dividerYConstraint.constant = self.view.bounds.size.height
+    }
+    
+    private func revealFields() {
+        UIView.animateWithDuration(0.5) {
+            self.tipControlYConstraint.constant = self.tipControlYConstant
+            self.tipTextYConstraint.constant = self.tipTextYConstant
+            self.tipLabelYConstraint.constant = self.tipLabelYConstant
+            self.totalTextLabelYConstraint.constant = self.totalTextLabelYConstant
+            self.totalLabelYConstraint.constant = self.totalLabelYConstant
+            self.dividerYConstraint.constant = self.dividerYConstant
+            self.view.layoutIfNeeded()
+        }
     }
     
     private func setupBillAmount() {
@@ -67,6 +119,7 @@ class TipViewController: UIViewController {
 
     @IBAction func onEditingChange(sender: AnyObject) {
         calculateTip()
+        revealFields()
     }
     
     private func tipPercentage() -> Double {
