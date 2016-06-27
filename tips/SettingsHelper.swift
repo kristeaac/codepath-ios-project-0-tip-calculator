@@ -11,6 +11,7 @@ import Foundation
 private let defaultTipPercentageKey: String = "default_tip_percentage"
 private let billAmountKey: String = "bill_amount"
 private let lastLoadedKey: String = "last_loaded"
+private let themeKey: String = "theme"
 
 struct SettingsHelper {
     
@@ -46,6 +47,17 @@ struct SettingsHelper {
         let defaults = NSUserDefaults.standardUserDefaults()
         let blah = defaults.objectForKey(lastLoadedKey) as? NSDate
         return blah
+    }
+    
+    static func setTheme(theme: String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(theme, forKey: themeKey)
+        defaults.synchronize()
+    }
+    
+    static func getTheme() -> String! {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.stringForKey(themeKey)
     }
     
 }

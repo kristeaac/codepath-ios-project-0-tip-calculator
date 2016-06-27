@@ -181,10 +181,13 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
                                 <color key="tintColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="✓">
+                                <state key="normal">
                                     <color key="titleColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="dye-tB-Doa" eventType="touchUpInside" id="YYh-kp-GAh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-br-786">
                                 <rect key="frame" x="16" y="204" width="70" height="70"/>
@@ -195,10 +198,13 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
                                 <color key="tintColor" red="0.99607843137254903" green="0.89411764705882346" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="✓">
+                                <state key="normal">
                                     <color key="titleColor" red="0.9882352941176471" green="0.74117647058823533" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="dye-tB-Doa" eventType="touchUpInside" id="gLC-Qa-OD2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-IQ-8a4">
                                 <rect key="frame" x="125" y="204" width="70" height="70"/>
@@ -209,10 +215,13 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
                                 <color key="tintColor" red="0.60968182692399397" green="0.87942442602040816" blue="0.59782867138948592" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="✓">
+                                <state key="normal">
                                     <color key="titleColor" red="0.40000000000000002" green="0.67843137254901964" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onClick:" destination="dye-tB-Doa" eventType="touchUpInside" id="fr7-N7-kqf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
@@ -237,7 +246,9 @@
                     <connections>
                         <outlet property="blueThemeButton" destination="WE3-Mu-V8u" id="t90-ZI-vLA"/>
                         <outlet property="defaultTipControl" destination="6ss-6l-eFr" id="ycG-VR-nNW"/>
+                        <outlet property="defaultTipLabel" destination="oTf-DB-w16" id="iuF-Tj-Kaz"/>
                         <outlet property="greenThemeButton" destination="OqN-IQ-8a4" id="zbz-Br-p4k"/>
+                        <outlet property="themeLabel" destination="YT2-hy-sNU" id="kpz-dz-6Rk"/>
                         <outlet property="yellowThemeButton" destination="gcp-br-786" id="Jkt-n0-nAh"/>
                     </connections>
                 </viewController>
