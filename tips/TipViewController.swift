@@ -18,9 +18,12 @@ class TipViewController: UIViewController {
     @IBOutlet weak var fieldsView: UIView!
     @IBOutlet weak var tipLabelLabel: UILabel!
     @IBOutlet weak var totalLabelLabel: UILabel!
-@IBOutlet weak var eachTextLabel: UILabel!
+    @IBOutlet weak var eachTextLabel: UILabel!
     @IBOutlet weak var settingsButtonItem: UIBarButtonItem!
-@IBOutlet weak var eachLabel: UILabel!
+    @IBOutlet weak var eachLabel: UILabel!
+    @IBOutlet weak var splitStepper: UIStepper!
+    @IBOutlet weak var splitNumberLabel: UILabel!
+    @IBOutlet weak var splitLabel: UILabel!
     
     // constraints
     @IBOutlet weak var tipControlYConstraint: NSLayoutConstraint!
@@ -31,6 +34,9 @@ class TipViewController: UIViewController {
     @IBOutlet weak var fieldsViewYConstraint: NSLayoutConstraint!
     @IBOutlet weak var eachLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var eachTextLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var splitStepperYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var splitLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var splitNumberLabelYConstraint: NSLayoutConstraint!
     
     var yConstants = [NSLayoutConstraint:CGFloat]()
     
@@ -70,7 +76,10 @@ class TipViewController: UIViewController {
             totalLabelYConstraint,
             fieldsViewYConstraint,
             eachLabelYConstraint,
-            eachTextLabelYConstraint
+            eachTextLabelYConstraint,
+            splitStepperYConstraint,
+            splitLabelYConstraint,
+            splitNumberLabelYConstraint
         ]
         for yConstraint in yConstraints {
             yConstants[yConstraint] = yConstraint.constant
@@ -121,6 +130,9 @@ class TipViewController: UIViewController {
             totalLabelLabel.textColor = selectedTheme.secondaryColor
             tipControl.tintColor = selectedTheme.secondaryColor
             settingsButtonItem.tintColor = selectedTheme.primaryColor
+            splitStepper.tintColor = selectedTheme.secondaryColor
+            splitLabel.textColor = selectedTheme.secondaryColor
+            splitNumberLabel.textColor = selectedTheme.secondaryColor
             self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
         }
     }

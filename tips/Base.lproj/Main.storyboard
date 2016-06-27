@@ -40,13 +40,29 @@
                                         <rect key="frame" x="210" y="172" width="94" height="29"/>
                                         <color key="tintColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juh-ep-vjn">
+                                        <rect key="frame" x="94" y="169" width="108" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Split" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-3G-uoc">
+                                        <rect key="frame" x="15" y="169" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="94o-qu-CvZ" secondAttribute="height" multiplier="10:11" id="1JP-CD-8fD"/>
                                     <constraint firstItem="edX-Yh-0Vk" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="82" id="3vw-qb-dUt"/>
+                                    <constraint firstItem="bf0-3G-uoc" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="172" id="Kv1-VN-GXV"/>
                                     <constraint firstAttribute="trailing" secondItem="edX-Yh-0Vk" secondAttribute="trailing" constant="16" id="Ncs-bS-JK2"/>
                                     <constraint firstItem="azG-km-jCj" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="172" id="OIg-zi-7j1"/>
+                                    <constraint firstItem="bf0-3G-uoc" firstAttribute="leading" secondItem="94o-qu-CvZ" secondAttribute="leading" constant="15" id="OcT-Hi-CoE"/>
+                                    <constraint firstAttribute="centerX" secondItem="Juh-ep-vjn" secondAttribute="centerX" id="P9Y-Cy-Yop"/>
+                                    <constraint firstItem="Juh-ep-vjn" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="172" id="e3h-RK-vOF"/>
                                     <constraint firstItem="edX-Yh-0Vk" firstAttribute="leading" secondItem="f9Y-J4-L27" secondAttribute="trailing" constant="14" id="fHE-BR-c5h"/>
                                     <constraint firstItem="f9Y-J4-L27" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="82" id="ha2-EM-0OO"/>
                                     <constraint firstItem="f9Y-J4-L27" firstAttribute="leading" secondItem="94o-qu-CvZ" secondAttribute="leading" constant="16" id="j1O-QY-0KN"/>
@@ -151,6 +167,12 @@
                         <outlet property="fieldsView" destination="94o-qu-CvZ" id="Vxx-Zm-Rbu"/>
                         <outlet property="fieldsViewYConstraint" destination="M2l-Kb-DwT" id="CMk-9b-Wds"/>
                         <outlet property="settingsButtonItem" destination="2hH-Aq-3Vm" id="wZd-ov-Oiy"/>
+                        <outlet property="splitLabel" destination="bf0-3G-uoc" id="jww-6p-Lj0"/>
+                        <outlet property="splitLabelYConstraint" destination="Kv1-VN-GXV" id="5Hm-17-fAp"/>
+                        <outlet property="splitNumberLabel" destination="Juh-ep-vjn" id="rci-Ks-GHo"/>
+                        <outlet property="splitNumberLabelYConstraint" destination="e3h-RK-vOF" id="K2P-Zv-ZFP"/>
+                        <outlet property="splitStepper" destination="azG-km-jCj" id="qE9-zS-y5W"/>
+                        <outlet property="splitStepperYConstraint" destination="OIg-zi-7j1" id="P7e-aL-kps"/>
                         <outlet property="tipControl" destination="8m7-xV-VAz" id="9y6-Au-i3A"/>
                         <outlet property="tipControlYConstraint" destination="2Dx-F5-yOi" id="gJp-C5-8xO"/>
                         <outlet property="tipLabel" destination="0ka-Rd-9EP" id="vCD-td-tbN"/>
