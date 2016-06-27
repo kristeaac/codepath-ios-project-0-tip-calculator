@@ -4,7 +4,7 @@
 
 Submitted by: **Kristy Caster**
 
-Time spent: **5** hours spent in total
+Time spent: **7** hours spent in total
 
 ## User Stories
 
@@ -22,6 +22,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] User can change theme colors
+- [X] User can specify how many people to split the bill by and save their default split preference
 
 ## Video Walkthrough 
 
