@@ -17,6 +17,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var blueThemeButton: UIButton!
     @IBOutlet weak var defaultTipLabel: UILabel!
     @IBOutlet weak var themeLabel: UILabel!
+    @IBOutlet weak var defaultSplitLabel: UILabel!
+    @IBOutlet weak var defaultSplitNumberLabel: UILabel!
+    @IBOutlet weak var defaultSplitStepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +98,9 @@ class SettingsViewController: UIViewController {
             defaultTipLabel.textColor = selectedTheme.secondaryColor
             themeLabel.textColor = selectedTheme.secondaryColor
             defaultTipControl.tintColor = selectedTheme.secondaryColor
+            defaultSplitLabel.textColor = selectedTheme.secondaryColor
+            defaultSplitNumberLabel.textColor = selectedTheme.secondaryColor
+            defaultSplitStepper.tintColor = selectedTheme.secondaryColor
             self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
             switch selectedTheme.name {
             case "yellow":
@@ -123,4 +129,7 @@ class SettingsViewController: UIViewController {
         button.setTitle("", forState: UIControlState.Normal)
     }
 
+    @IBAction func onDefaultSplitChanged(sender: UIStepper) {
+        defaultSplitNumberLabel.text = Int(sender.value).description
+    }
 }

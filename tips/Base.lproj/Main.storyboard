@@ -284,20 +284,44 @@
                                     <action selector="onClick:" destination="dye-tB-Doa" eventType="touchUpInside" id="fr7-N7-kqf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Default Split" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-AV-juK">
+                                <rect key="frame" x="47" y="296" width="227" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="IFi-Xa-vZu">
+                                <rect key="frame" x="113" y="363" width="94" height="29"/>
+                                <color key="tintColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onDefaultSplitChanged:" destination="dye-tB-Doa" eventType="valueChanged" id="NGS-mH-2lU"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P33-i1-YFb">
+                                <rect key="frame" x="116" y="327" width="88" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="OqN-IQ-8a4" secondAttribute="centerX" id="28T-F8-Dz3"/>
+                            <constraint firstItem="P33-i1-YFb" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="263" id="5rv-kq-Y99"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="9aA-ui-cK3"/>
+                            <constraint firstAttribute="centerX" secondItem="IFi-Xa-vZu" secondAttribute="centerX" id="D6M-dc-tVk"/>
+                            <constraint firstAttribute="centerX" secondItem="yr8-AV-juK" secondAttribute="centerX" id="FpP-WI-Vbp"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="trailing" secondItem="GQD-Yx-vCw" secondAttribute="trailingMargin" id="GWe-nB-F8E"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="top" secondItem="oTf-DB-w16" secondAttribute="bottom" constant="14" id="HI5-LF-3Iq"/>
                             <constraint firstItem="WE3-Mu-V8u" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="I6O-iR-qfX"/>
                             <constraint firstItem="YT2-hy-sNU" firstAttribute="top" secondItem="6ss-6l-eFr" secondAttribute="bottom" constant="18" id="Jac-wK-AXH"/>
                             <constraint firstItem="gcp-br-786" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="LSw-JM-iQ3"/>
                             <constraint firstAttribute="centerX" secondItem="oTf-DB-w16" secondAttribute="centerX" id="Q9o-na-8Cg"/>
+                            <constraint firstAttribute="centerX" secondItem="P33-i1-YFb" secondAttribute="centerX" id="VFC-ze-Xw9"/>
                             <constraint firstAttribute="centerX" secondItem="YT2-hy-sNU" secondAttribute="centerX" id="bai-5f-Bt3"/>
                             <constraint firstItem="WE3-Mu-V8u" firstAttribute="leading" secondItem="OqN-IQ-8a4" secondAttribute="trailing" constant="39" id="bzg-eY-JjT"/>
                             <constraint firstItem="OqN-IQ-8a4" firstAttribute="leading" secondItem="gcp-br-786" secondAttribute="trailing" constant="39" id="eBD-o5-SVZ"/>
+                            <constraint firstItem="IFi-Xa-vZu" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="299" id="eGO-mL-GgI"/>
                             <constraint firstItem="OqN-IQ-8a4" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="glG-Ou-cGs"/>
                             <constraint firstItem="oTf-DB-w16" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="15" id="u7x-LS-eox"/>
                             <constraint firstItem="oTf-DB-w16" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="xvd-xS-Fz0"/>
@@ -306,6 +330,9 @@
                     <navigationItem key="navigationItem" id="hbg-On-1RB"/>
                     <connections>
                         <outlet property="blueThemeButton" destination="WE3-Mu-V8u" id="t90-ZI-vLA"/>
+                        <outlet property="defaultSplitLabel" destination="yr8-AV-juK" id="CrS-uc-Pkf"/>
+                        <outlet property="defaultSplitNumberLabel" destination="P33-i1-YFb" id="lZf-WW-5s3"/>
+                        <outlet property="defaultSplitStepper" destination="IFi-Xa-vZu" id="ShX-x7-foR"/>
                         <outlet property="defaultTipControl" destination="6ss-6l-eFr" id="ycG-VR-nNW"/>
                         <outlet property="defaultTipLabel" destination="oTf-DB-w16" id="iuF-Tj-Kaz"/>
                         <outlet property="greenThemeButton" destination="OqN-IQ-8a4" id="zbz-Br-p4k"/>
