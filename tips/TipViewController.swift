@@ -57,6 +57,7 @@ class TipViewController: UIViewController {
         tipLabel.text = localCurrency(0.0)
         totalLabel.text = localCurrency(0.0)
         tipControl.selectedSegmentIndex = defaultTipIndex()
+        onSplitStepperValueChanged(splitStepper)
         setupBillAmount()
         calculateTip()
         if billAmount() == 0.0 {
@@ -177,9 +178,11 @@ class TipViewController: UIViewController {
         var amount = billAmount()
         var tip = amount * tipPercentage()
         var total = amount + tip
+        var each = total / split()
         
         tipLabel.text = localCurrency(tip)
         totalLabel.text = localCurrency(total)
+        eachLabel.text = localCurrency(each)
     }
     
     private func localCurrency(amount: Double) -> String {
@@ -193,6 +196,15 @@ class TipViewController: UIViewController {
         return NSString(string: billField.text!).doubleValue
     }
 
+    @IBAction func onSplitStepperValueChanged(sender: UIStepper) {
+        splitNumberLabel.text = Int(sender.value).description
+        calculateTip()
+    }
+    
+    private func split() -> Double {
+        return splitStepper.value
+    }
+    
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
