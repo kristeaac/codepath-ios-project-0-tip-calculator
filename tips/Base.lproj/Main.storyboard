@@ -20,7 +20,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94o-qu-CvZ">
                                 <rect key="frame" x="0.0" y="172" width="320" height="352"/>
-                                <color key="backgroundColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="94o-qu-CvZ" secondAttribute="height" multiplier="10:11" id="1JP-CD-8fD"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X18-iL-5AK">
                                 <rect key="frame" x="16" y="191" width="66" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy7-Tq-zvo">
@@ -37,19 +37,19 @@
                                     <constraint firstAttribute="width" constant="66" id="wyO-1K-Zl3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-oz-msx">
                                 <rect key="frame" x="196" y="223" width="108" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$10.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ka-Rd-9EP">
                                 <rect key="frame" x="135" y="191" width="169" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jYe-Pq-deZ">
@@ -62,14 +62,14 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
-                                <color key="tintColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="V3p-dj-4eN"/>
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="100.00" placeholder="$0.00" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-jd-705">
                                 <rect key="frame" x="0.0" y="72" width="320" height="101"/>
-                                <color key="textColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
@@ -78,7 +78,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8m7-xV-VAz" secondAttribute="centerX" id="0Ot-QT-YhQ"/>
@@ -151,7 +151,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-DB-w16">
                                 <rect key="frame" x="47" y="79" width="227" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                <color key="textColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ss-6l-eFr">
@@ -161,25 +161,84 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
-                                <color key="tintColor" red="0.61960784313725492" green="0.67450980392156867" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onValueChanged:" destination="dye-tB-Doa" eventType="valueChanged" id="fTi-8b-o7I"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Theme" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-hy-sNU">
+                                <rect key="frame" x="47" y="160" width="227" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WE3-Mu-V8u">
+                                <rect key="frame" x="234" y="204" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Gr4-CX-QoV"/>
+                                    <constraint firstAttribute="width" constant="70" id="YXR-b7-wqG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                <color key="tintColor" red="0.6705882352941176" green="0.83921568627450982" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="✓">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcp-br-786">
+                                <rect key="frame" x="16" y="204" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.89411764705882346" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="6xr-qL-Z6A"/>
+                                    <constraint firstAttribute="height" constant="70" id="H5S-ay-0QV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                <color key="tintColor" red="0.99607843137254903" green="0.89411764705882346" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="✓">
+                                    <color key="titleColor" red="0.9882352941176471" green="0.74117647058823533" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqN-IQ-8a4">
+                                <rect key="frame" x="125" y="204" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.60968182692399397" green="0.87942442602040816" blue="0.59782867138948592" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="5Vv-WH-np5"/>
+                                    <constraint firstAttribute="height" constant="70" id="NjF-aR-tud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="50"/>
+                                <color key="tintColor" red="0.60968182692399397" green="0.87942442602040816" blue="0.59782867138948592" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="✓">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.67843137254901964" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OqN-IQ-8a4" secondAttribute="centerX" id="28T-F8-Dz3"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="9aA-ui-cK3"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="trailing" secondItem="GQD-Yx-vCw" secondAttribute="trailingMargin" id="GWe-nB-F8E"/>
                             <constraint firstItem="6ss-6l-eFr" firstAttribute="top" secondItem="oTf-DB-w16" secondAttribute="bottom" constant="14" id="HI5-LF-3Iq"/>
+                            <constraint firstItem="WE3-Mu-V8u" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="I6O-iR-qfX"/>
+                            <constraint firstItem="YT2-hy-sNU" firstAttribute="top" secondItem="6ss-6l-eFr" secondAttribute="bottom" constant="18" id="Jac-wK-AXH"/>
+                            <constraint firstItem="gcp-br-786" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="LSw-JM-iQ3"/>
                             <constraint firstAttribute="centerX" secondItem="oTf-DB-w16" secondAttribute="centerX" id="Q9o-na-8Cg"/>
+                            <constraint firstAttribute="centerX" secondItem="YT2-hy-sNU" secondAttribute="centerX" id="bai-5f-Bt3"/>
+                            <constraint firstItem="WE3-Mu-V8u" firstAttribute="leading" secondItem="OqN-IQ-8a4" secondAttribute="trailing" constant="39" id="bzg-eY-JjT"/>
+                            <constraint firstItem="OqN-IQ-8a4" firstAttribute="leading" secondItem="gcp-br-786" secondAttribute="trailing" constant="39" id="eBD-o5-SVZ"/>
+                            <constraint firstItem="OqN-IQ-8a4" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="140" id="glG-Ou-cGs"/>
                             <constraint firstItem="oTf-DB-w16" firstAttribute="top" secondItem="G1y-rd-QIy" secondAttribute="bottom" constant="15" id="u7x-LS-eox"/>
                             <constraint firstItem="oTf-DB-w16" firstAttribute="leading" secondItem="GQD-Yx-vCw" secondAttribute="leadingMargin" id="xvd-xS-Fz0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hbg-On-1RB"/>
                     <connections>
+                        <outlet property="blueThemeButton" destination="WE3-Mu-V8u" id="t90-ZI-vLA"/>
                         <outlet property="defaultTipControl" destination="6ss-6l-eFr" id="ycG-VR-nNW"/>
+                        <outlet property="greenThemeButton" destination="OqN-IQ-8a4" id="zbz-Br-p4k"/>
+                        <outlet property="yellowThemeButton" destination="gcp-br-786" id="Jkt-n0-nAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PP6-4P-KAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,5 +269,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <color key="tintColor" red="0.20784313725490194" green="0.34509803921568627" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
 </document>
