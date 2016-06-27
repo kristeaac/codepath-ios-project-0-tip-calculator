@@ -15,6 +15,10 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var fieldsView: UIView!
+    @IBOutlet weak var tipLabelLabel: UILabel!
+    @IBOutlet weak var totalLabelLabel: UILabel!
+    @IBOutlet weak var settingsButtonItem: UIBarButtonItem!
     
     // constraints
     @IBOutlet weak var tipControlYConstraint: NSLayoutConstraint!
@@ -100,6 +104,23 @@ class TipViewController: UIViewController {
         super.viewWillAppear(animated)
         tipControl.selectedSegmentIndex = defaultTipIndex()
         calculateTip()
+        updateScreenTheme()
+    }
+    
+    private func updateScreenTheme() {
+        var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
+        if selectedTheme != nil {
+            view.backgroundColor = selectedTheme.secondaryColor
+            billField.textColor = selectedTheme.primaryColor
+            fieldsView.backgroundColor = selectedTheme.primaryColor
+            tipLabel.textColor = selectedTheme.secondaryColor
+            totalLabel.textColor = selectedTheme.secondaryColor
+            tipLabelLabel.textColor = selectedTheme.secondaryColor
+            totalLabelLabel.textColor = selectedTheme.secondaryColor
+            tipControl.tintColor = selectedTheme.secondaryColor
+            settingsButtonItem.tintColor = selectedTheme.primaryColor
+            self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+        }
     }
     
     private func defaultTipIndex() -> Int {

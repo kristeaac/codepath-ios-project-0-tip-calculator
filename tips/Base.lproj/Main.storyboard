@@ -116,13 +116,17 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billField" destination="TNV-jd-705" id="TAb-zD-FaD"/>
+                        <outlet property="fieldsView" destination="94o-qu-CvZ" id="Vxx-Zm-Rbu"/>
                         <outlet property="fieldsViewYConstraint" destination="M2l-Kb-DwT" id="8qK-OG-V2R"/>
+                        <outlet property="settingsButtonItem" destination="2hH-Aq-3Vm" id="wZd-ov-Oiy"/>
                         <outlet property="tipControl" destination="8m7-xV-VAz" id="9y6-Au-i3A"/>
                         <outlet property="tipControlYConstraint" destination="2Dx-F5-yOi" id="gJp-C5-8xO"/>
                         <outlet property="tipLabel" destination="0ka-Rd-9EP" id="vCD-td-tbN"/>
+                        <outlet property="tipLabelLabel" destination="X18-iL-5AK" id="5uI-FY-eCi"/>
                         <outlet property="tipLabelYConstraint" destination="UVp-24-vBm" id="z4g-Rv-Ail"/>
                         <outlet property="tipTextYConstraint" destination="fji-kG-THI" id="daG-7o-1a5"/>
                         <outlet property="totalLabel" destination="sJo-oz-msx" id="F16-5D-U16"/>
+                        <outlet property="totalLabelLabel" destination="Fy7-Tq-zvo" id="uwz-lx-Ltb"/>
                         <outlet property="totalLabelYConstraint" destination="TGH-Iu-su0" id="RMX-is-3qn"/>
                         <outlet property="totalTextLabelYConstraint" destination="GDU-de-1BR" id="YxS-dn-xCx"/>
                     </connections>

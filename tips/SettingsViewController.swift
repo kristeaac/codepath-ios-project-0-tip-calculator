@@ -95,6 +95,7 @@ class SettingsViewController: UIViewController {
             defaultTipLabel.textColor = selectedTheme.secondaryColor
             themeLabel.textColor = selectedTheme.secondaryColor
             defaultTipControl.tintColor = selectedTheme.secondaryColor
+            self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
             switch selectedTheme.name {
             case "yellow":
                 selectThemeButton(yellowThemeButton)
