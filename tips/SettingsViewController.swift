@@ -43,6 +43,7 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
         defaultTipControl.selectedSegmentIndex = defaultTipIndex()
         updateScreenTheme()
+        setupSplit()
     }
     
     private func defaultTipIndex() -> Int {
@@ -70,6 +71,15 @@ class SettingsViewController: UIViewController {
     private func tipPercentage() -> Double {
         var tipPercentages = [0.18, 0.2, 0.22]
         return tipPercentages[defaultTipControl.selectedSegmentIndex]
+    }
+    
+    private func setupSplit() {
+        var split = SettingsHelper.getDefaultSplit()
+        if split == 0 {
+            split = 1
+        }
+        defaultSplitStepper.value = Double(split)
+        onDefaultSplitChanged(defaultSplitStepper)
     }
     
     @IBAction func onClick(sender: UIButton) {
@@ -130,6 +140,8 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func onDefaultSplitChanged(sender: UIStepper) {
-        defaultSplitNumberLabel.text = Int(sender.value).description
+        var split = Int(sender.value)
+        defaultSplitNumberLabel.text = split.description
+        SettingsHelper.setDefaultSplit(split)
     }
 }

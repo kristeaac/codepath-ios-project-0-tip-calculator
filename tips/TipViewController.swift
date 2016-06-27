@@ -57,7 +57,7 @@ class TipViewController: UIViewController {
         tipLabel.text = localCurrency(0.0)
         totalLabel.text = localCurrency(0.0)
         tipControl.selectedSegmentIndex = defaultTipIndex()
-        onSplitStepperValueChanged(splitStepper)
+        setupSplit()
         setupBillAmount()
         calculateTip()
         if billAmount() == 0.0 {
@@ -110,9 +110,19 @@ class TipViewController: UIViewController {
         billField.becomeFirstResponder()
     }
     
+    private func setupSplit() {
+        var split = SettingsHelper.getDefaultSplit()
+        if split == 0 {
+            split = 1
+        }
+        splitStepper.value = Double(split)
+        onSplitStepperValueChanged(splitStepper)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tipControl.selectedSegmentIndex = defaultTipIndex()
+        setupSplit()
         calculateTip()
         updateScreenTheme()
     }

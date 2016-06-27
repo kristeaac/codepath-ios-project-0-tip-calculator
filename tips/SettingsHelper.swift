@@ -12,6 +12,7 @@ private let defaultTipPercentageKey: String = "default_tip_percentage"
 private let billAmountKey: String = "bill_amount"
 private let lastLoadedKey: String = "last_loaded"
 private let themeKey: String = "theme"
+private let defaultSplitKey: String = "default_split"
 
 struct SettingsHelper {
     
@@ -58,6 +59,17 @@ struct SettingsHelper {
     static func getTheme() -> String! {
         let defaults = NSUserDefaults.standardUserDefaults()
         return defaults.stringForKey(themeKey)
+    }
+    
+    static func setDefaultSplit(split: Int) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(split, forKey: defaultSplitKey)
+        defaults.synchronize()
+    }
+    
+    static func getDefaultSplit() -> Int {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.integerForKey(defaultSplitKey)
     }
     
 }
