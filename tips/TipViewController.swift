@@ -18,7 +18,9 @@ class TipViewController: UIViewController {
     @IBOutlet weak var fieldsView: UIView!
     @IBOutlet weak var tipLabelLabel: UILabel!
     @IBOutlet weak var totalLabelLabel: UILabel!
+@IBOutlet weak var eachTextLabel: UILabel!
     @IBOutlet weak var settingsButtonItem: UIBarButtonItem!
+@IBOutlet weak var eachLabel: UILabel!
     
     // constraints
     @IBOutlet weak var tipControlYConstraint: NSLayoutConstraint!
@@ -27,7 +29,9 @@ class TipViewController: UIViewController {
     @IBOutlet weak var totalTextLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var totalLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var fieldsViewYConstraint: NSLayoutConstraint!
-   
+    @IBOutlet weak var eachLabelYConstraint: NSLayoutConstraint!
+    @IBOutlet weak var eachTextLabelYConstraint: NSLayoutConstraint!
+    
     // original Y positions
     var tipControlYConstant: CGFloat!
     var tipTextYConstant: CGFloat!
@@ -35,6 +39,8 @@ class TipViewController: UIViewController {
     var totalTextLabelYConstant: CGFloat!
     var totalLabelYConstant: CGFloat!
     var fieldsViewYConstant: CGFloat!
+    var eachTextLabelYConstant: CGFloat!
+    var eachLabelYConstant: CGFloat!
 
     var needToRevealFields = false
 
@@ -71,6 +77,12 @@ class TipViewController: UIViewController {
 
         fieldsViewYConstant = fieldsViewYConstraint.constant
         fieldsViewYConstraint.constant = self.view.bounds.size.height
+        
+        eachTextLabelYConstant = eachTextLabelYConstraint.constant
+        eachTextLabelYConstraint.constant = self.view.bounds.size.height
+        
+        eachLabelYConstant = eachLabelYConstraint.constant
+        eachLabelYConstraint.constant = self.view.bounds.size.height
 
     }
     
@@ -82,6 +94,8 @@ class TipViewController: UIViewController {
             self.totalTextLabelYConstraint.constant = self.totalTextLabelYConstant
             self.totalLabelYConstraint.constant = self.totalLabelYConstant
             self.fieldsViewYConstraint.constant = self.fieldsViewYConstant
+            self.eachTextLabelYConstraint.constant = self.eachTextLabelYConstant
+            self.eachLabelYConstraint.constant = self.eachLabelYConstant
 
             self.view.layoutIfNeeded()
         }
@@ -116,6 +130,8 @@ class TipViewController: UIViewController {
             tipLabel.textColor = selectedTheme.secondaryColor
             totalLabel.textColor = selectedTheme.secondaryColor
             tipLabelLabel.textColor = selectedTheme.secondaryColor
+            eachLabel.textColor = selectedTheme.secondaryColor
+            eachTextLabel.textColor = selectedTheme.secondaryColor
             totalLabelLabel.textColor = selectedTheme.secondaryColor
             tipControl.tintColor = selectedTheme.secondaryColor
             settingsButtonItem.tintColor = selectedTheme.primaryColor
