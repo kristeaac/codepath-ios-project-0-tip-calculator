@@ -114,7 +114,7 @@
                                     <action selector="onEditingChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="V3p-dj-4eN"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="right" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="100.00" placeholder="$0.00" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-jd-705">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="right" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="100.00" placeholder="$0.00" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="TNV-jd-705">
                                 <rect key="frame" x="0.0" y="72" width="320" height="101"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="60"/>
@@ -144,7 +144,6 @@
                             <constraint firstItem="X18-iL-5AK" firstAttribute="top" secondItem="3VT-z9-Yjs" secondAttribute="bottom" constant="127" id="fji-kG-THI"/>
                             <constraint firstItem="sJo-oz-msx" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ghs-2m-edT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="94o-qu-CvZ" secondAttribute="trailing" constant="-16" id="mo4-ja-sWk"/>
-                            <constraint firstItem="94o-qu-CvZ" firstAttribute="top" secondItem="TNV-jd-705" secondAttribute="bottom" constant="-1" id="pAK-Tp-yhz"/>
                             <constraint firstItem="94o-qu-CvZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="rwl-dg-qbu"/>
                             <constraint firstItem="0ka-Rd-9EP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ugN-f1-uEZ"/>
                         </constraints>
@@ -163,6 +162,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="billField" destination="TNV-jd-705" id="TAb-zD-FaD"/>
+                        <outlet property="billFieldYConstraint" destination="f1Z-Ba-4Lb" id="bcg-5N-o9h"/>
                         <outlet property="eachLabel" destination="edX-Yh-0Vk" id="n00-pc-lfS"/>
                         <outlet property="eachLabelYConstraint" destination="3vw-qb-dUt" id="duf-ne-n3a"/>
                         <outlet property="eachTextLabel" destination="f9Y-J4-L27" id="CPC-NU-msF"/>

@@ -37,20 +37,12 @@ class TipViewController: UIViewController {
     @IBOutlet weak var splitStepperYConstraint: NSLayoutConstraint!
     @IBOutlet weak var splitLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var splitNumberLabelYConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var billFieldYConstraint: NSLayoutConstraint!
+
     var yConstants = [NSLayoutConstraint:CGFloat]()
-    
-    // original Y positions
-    var tipControlYConstant: CGFloat!
-    var tipTextYConstant: CGFloat!
-    var tipLabelYConstant: CGFloat!
-    var totalTextLabelYConstant: CGFloat!
-    var totalLabelYConstant: CGFloat!
-    var fieldsViewYConstant: CGFloat!
-    var eachTextLabelYConstant: CGFloat!
-    var eachLabelYConstant: CGFloat!
 
     var needToRevealFields = false
+    var originalBillFieldFontSize: CGFloat!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +72,18 @@ class TipViewController: UIViewController {
             eachTextLabelYConstraint,
             splitStepperYConstraint,
             splitLabelYConstraint,
-            splitNumberLabelYConstraint
+            splitNumberLabelYConstraint,
+            billFieldYConstraint
         ]
         for yConstraint in yConstraints {
             yConstants[yConstraint] = yConstraint.constant
-            yConstraint.constant = self.view.bounds.size.height
+            if (yConstraint == billFieldYConstraint) {
+                yConstraint.constant = self.view.center.x
+                originalBillFieldFontSize = billField.font.pointSize
+                billField.font = billField.font.fontWithSize(120)
+            } else {
+                yConstraint.constant = self.view.bounds.size.height
+            }
         }
     }
     
@@ -93,6 +92,7 @@ class TipViewController: UIViewController {
             for (constraint, constant) in self.yConstants {
                 constraint.constant = constant
             }
+            self.billField.font = self.billField.font.fontWithSize(self.originalBillFieldFontSize)
             self.view.layoutIfNeeded()
         }
     }
