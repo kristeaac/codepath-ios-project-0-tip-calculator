@@ -32,6 +32,8 @@ class TipViewController: UIViewController {
     @IBOutlet weak var eachLabelYConstraint: NSLayoutConstraint!
     @IBOutlet weak var eachTextLabelYConstraint: NSLayoutConstraint!
     
+    var yConstants = [NSLayoutConstraint:CGFloat]()
+    
     // original Y positions
     var tipControlYConstant: CGFloat!
     var tipTextYConstant: CGFloat!
@@ -60,43 +62,27 @@ class TipViewController: UIViewController {
     }
 
     private func hideFields() {
-        tipControlYConstant = tipControlYConstraint.constant
-        tipControlYConstraint.constant = self.view.bounds.size.height
-        
-        tipTextYConstant = tipTextYConstraint.constant
-        tipTextYConstraint.constant = self.view.bounds.size.height
-        
-        tipLabelYConstant = tipLabelYConstraint.constant
-        tipLabelYConstraint.constant = self.view.bounds.size.height
-        
-        totalTextLabelYConstant = totalTextLabelYConstraint.constant
-        totalTextLabelYConstraint.constant = self.view.bounds.size.height
-        
-        totalLabelYConstant = totalLabelYConstraint.constant
-        totalLabelYConstraint.constant = self.view.bounds.size.height
-
-        fieldsViewYConstant = fieldsViewYConstraint.constant
-        fieldsViewYConstraint.constant = self.view.bounds.size.height
-        
-        eachTextLabelYConstant = eachTextLabelYConstraint.constant
-        eachTextLabelYConstraint.constant = self.view.bounds.size.height
-        
-        eachLabelYConstant = eachLabelYConstraint.constant
-        eachLabelYConstraint.constant = self.view.bounds.size.height
-
+        var yConstraints = [
+            tipControlYConstraint,
+            tipTextYConstraint,
+            tipLabelYConstraint,
+            totalTextLabelYConstraint,
+            totalLabelYConstraint,
+            fieldsViewYConstraint,
+            eachLabelYConstraint,
+            eachTextLabelYConstraint
+        ]
+        for yConstraint in yConstraints {
+            yConstants[yConstraint] = yConstraint.constant
+            yConstraint.constant = self.view.bounds.size.height
+        }
     }
     
     private func revealFields() {
         UIView.animateWithDuration(0.5) {
-            self.tipControlYConstraint.constant = self.tipControlYConstant
-            self.tipTextYConstraint.constant = self.tipTextYConstant
-            self.tipLabelYConstraint.constant = self.tipLabelYConstant
-            self.totalTextLabelYConstraint.constant = self.totalTextLabelYConstant
-            self.totalLabelYConstraint.constant = self.totalLabelYConstant
-            self.fieldsViewYConstraint.constant = self.fieldsViewYConstant
-            self.eachTextLabelYConstraint.constant = self.eachTextLabelYConstant
-            self.eachLabelYConstraint.constant = self.eachLabelYConstant
-
+            for (constraint, constant) in self.yConstants {
+                constraint.constant = constant
+            }
             self.view.layoutIfNeeded()
         }
     }

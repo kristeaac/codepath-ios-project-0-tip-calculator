@@ -36,15 +36,21 @@
                                         <color key="textColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="azG-km-jCj">
+                                        <rect key="frame" x="210" y="172" width="94" height="29"/>
+                                        <color key="tintColor" red="0.6705882353" green="0.83921568629999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stepper>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.60392156862745094" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="94o-qu-CvZ" secondAttribute="height" multiplier="10:11" id="1JP-CD-8fD"/>
                                     <constraint firstItem="edX-Yh-0Vk" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="82" id="3vw-qb-dUt"/>
                                     <constraint firstAttribute="trailing" secondItem="edX-Yh-0Vk" secondAttribute="trailing" constant="16" id="Ncs-bS-JK2"/>
+                                    <constraint firstItem="azG-km-jCj" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="172" id="OIg-zi-7j1"/>
                                     <constraint firstItem="edX-Yh-0Vk" firstAttribute="leading" secondItem="f9Y-J4-L27" secondAttribute="trailing" constant="14" id="fHE-BR-c5h"/>
                                     <constraint firstItem="f9Y-J4-L27" firstAttribute="top" secondItem="94o-qu-CvZ" secondAttribute="top" constant="82" id="ha2-EM-0OO"/>
                                     <constraint firstItem="f9Y-J4-L27" firstAttribute="leading" secondItem="94o-qu-CvZ" secondAttribute="leading" constant="16" id="j1O-QY-0KN"/>
+                                    <constraint firstAttribute="trailing" secondItem="azG-km-jCj" secondAttribute="trailing" constant="16" id="yLp-xd-icw"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X18-iL-5AK">
