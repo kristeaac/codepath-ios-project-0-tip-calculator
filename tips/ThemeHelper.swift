@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 let themes = [
-    "yellow": Theme(name: "yellow", primaryColor: ThemeHelper.UIColorFromHex(0xFCBD31), secondaryColor: ThemeHelper.UIColorFromHex(0xFEE4A4)),
-    "green": Theme(name: "green", primaryColor: ThemeHelper.UIColorFromHex(0x66AD63), secondaryColor: ThemeHelper.UIColorFromHex(0x9BE098)),
-    "blue": Theme(name: "blue", primaryColor: ThemeHelper.UIColorFromHex(0x339AB5), secondaryColor: ThemeHelper.UIColorFromHex(0xABD6E1))
+    "yellow": Theme(name: "yellow", primaryColor: ThemeHelper.UIColorFromHex(0xFCBD31), secondaryColor: ThemeHelper.UIColorFromHex(0xFEE4A4), primaryTextColor: ThemeHelper.UIColorFromHex(0xFFFFFF), secondaryTextColor: ThemeHelper.UIColorFromHex(0xFCBD31)),
+    "green": Theme(name: "green", primaryColor: ThemeHelper.UIColorFromHex(0x66AD63), secondaryColor: ThemeHelper.UIColorFromHex(0x9BE098), primaryTextColor: ThemeHelper.UIColorFromHex(0xFFFFFF), secondaryTextColor: ThemeHelper.UIColorFromHex(0x66AD63)),
+    "blue": Theme(name: "blue", primaryColor: ThemeHelper.UIColorFromHex(0x339AB5), secondaryColor: ThemeHelper.UIColorFromHex(0xABD6E1), primaryTextColor: ThemeHelper.UIColorFromHex(0xFFFFFF), secondaryTextColor: ThemeHelper.UIColorFromHex(0x339AB5))
 ]
 
 struct ThemeHelper {

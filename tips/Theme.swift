@@ -12,12 +12,16 @@ import UIKit
 class Theme {
     var primaryColor: UIColor
     var secondaryColor: UIColor
+    var primaryTextColor: UIColor
+    var secondaryTextColor: UIColor
     var name: String
     
-    init(name: String, primaryColor: UIColor, secondaryColor: UIColor) {
+    init(name: String, primaryColor: UIColor, secondaryColor: UIColor, primaryTextColor: UIColor, secondaryTextColor: UIColor) {
         self.name = name
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryColor
+        self.primaryTextColor = primaryTextColor
+        self.secondaryTextColor = secondaryTextColor
     }
     
 }

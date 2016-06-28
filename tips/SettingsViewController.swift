@@ -107,13 +107,13 @@ class SettingsViewController: UIViewController {
             var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
             if selectedTheme != nil {
                 view.backgroundColor = selectedTheme.primaryColor
-                defaultTipLabel.textColor = selectedTheme.secondaryColor
-                themeLabel.textColor = selectedTheme.secondaryColor
-                defaultTipControl.tintColor = selectedTheme.secondaryColor
-                defaultSplitLabel.textColor = selectedTheme.secondaryColor
-                defaultSplitNumberLabel.textColor = selectedTheme.secondaryColor
-                defaultSplitStepper.tintColor = selectedTheme.secondaryColor
-                self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+                defaultTipLabel.textColor = selectedTheme.primaryTextColor
+                themeLabel.textColor = selectedTheme.primaryTextColor
+                defaultTipControl.tintColor = selectedTheme.primaryTextColor
+                defaultSplitLabel.textColor = selectedTheme.primaryTextColor
+                defaultSplitNumberLabel.textColor = selectedTheme.primaryTextColor
+                defaultSplitStepper.tintColor = selectedTheme.primaryTextColor
+                self.navigationController?.navigationBar.tintColor = selectedTheme.secondaryTextColor
                 switch selectedTheme.name {
                 case "yellow":
                     selectThemeButton(yellowThemeButton)

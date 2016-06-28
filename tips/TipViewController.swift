@@ -133,20 +133,20 @@ class TipViewController: UIViewController {
             var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
             if selectedTheme != nil {
                 view.backgroundColor = selectedTheme.secondaryColor
-                billField.textColor = selectedTheme.primaryColor
+                billField.textColor = selectedTheme.secondaryTextColor
                 fieldsView.backgroundColor = selectedTheme.primaryColor
-                tipLabel.textColor = selectedTheme.secondaryColor
-                totalLabel.textColor = selectedTheme.secondaryColor
-                tipLabelLabel.textColor = selectedTheme.secondaryColor
-                eachLabel.textColor = selectedTheme.secondaryColor
-                eachTextLabel.textColor = selectedTheme.secondaryColor
-                totalLabelLabel.textColor = selectedTheme.secondaryColor
-                tipControl.tintColor = selectedTheme.secondaryColor
-                settingsButtonItem.tintColor = selectedTheme.primaryColor
-                splitStepper.tintColor = selectedTheme.secondaryColor
-                splitLabel.textColor = selectedTheme.secondaryColor
-                splitNumberLabel.textColor = selectedTheme.secondaryColor
-                self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+                tipLabel.textColor = selectedTheme.primaryTextColor
+                totalLabel.textColor = selectedTheme.primaryTextColor
+                tipLabelLabel.textColor = selectedTheme.primaryTextColor
+                eachLabel.textColor = selectedTheme.primaryTextColor
+                eachTextLabel.textColor = selectedTheme.primaryTextColor
+                totalLabelLabel.textColor = selectedTheme.primaryTextColor
+                tipControl.tintColor = selectedTheme.primaryTextColor
+                splitStepper.tintColor = selectedTheme.primaryTextColor
+                splitLabel.textColor = selectedTheme.primaryTextColor
+                splitNumberLabel.textColor = selectedTheme.primaryTextColor
+                self.navigationController?.navigationBar.tintColor = selectedTheme.secondaryTextColor
+                settingsButtonItem.tintColor = selectedTheme.secondaryTextColor
             }
         }
         
