@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D8B1C237-8DF8-4AEF-99D0-D87A19F99829</string>
+	<key>IDESourceControlProjectName</key>
+	<string>tippy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>148FDA381F728F0554E459D35CECE382454EBE6C</key>
+		<string>https://github.com/kristeaac/codepath-ios-project-0-tip-calculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>tippy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>148FDA381F728F0554E459D35CECE382454EBE6C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kristeaac/codepath-ios-project-0-tip-calculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>148FDA381F728F0554E459D35CECE382454EBE6C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>148FDA381F728F0554E459D35CECE382454EBE6C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tips</string>
+		</dict>
+	</array>
+</dict>
+</plist>
