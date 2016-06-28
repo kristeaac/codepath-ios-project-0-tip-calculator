@@ -102,31 +102,34 @@ class SettingsViewController: UIViewController {
     }
     
     private func updateScreenTheme() {
-        var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
-        if selectedTheme != nil {
-            view.backgroundColor = selectedTheme.primaryColor
-            defaultTipLabel.textColor = selectedTheme.secondaryColor
-            themeLabel.textColor = selectedTheme.secondaryColor
-            defaultTipControl.tintColor = selectedTheme.secondaryColor
-            defaultSplitLabel.textColor = selectedTheme.secondaryColor
-            defaultSplitNumberLabel.textColor = selectedTheme.secondaryColor
-            defaultSplitStepper.tintColor = selectedTheme.secondaryColor
-            self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
-            switch selectedTheme.name {
-            case "yellow":
-                selectThemeButton(yellowThemeButton)
-                deselectThemeButton(greenThemeButton)
-                deselectThemeButton(blueThemeButton)
-            case "green":
-                selectThemeButton(greenThemeButton)
-                deselectThemeButton(yellowThemeButton)
-                deselectThemeButton(blueThemeButton)
-            case "blue":
-                selectThemeButton(blueThemeButton)
-                deselectThemeButton(greenThemeButton)
-                deselectThemeButton(yellowThemeButton)
-            default:
-                println("unknown theme name")
+        var savedTheme = SettingsHelper.getTheme()
+        if savedTheme != nil {
+            var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
+            if selectedTheme != nil {
+                view.backgroundColor = selectedTheme.primaryColor
+                defaultTipLabel.textColor = selectedTheme.secondaryColor
+                themeLabel.textColor = selectedTheme.secondaryColor
+                defaultTipControl.tintColor = selectedTheme.secondaryColor
+                defaultSplitLabel.textColor = selectedTheme.secondaryColor
+                defaultSplitNumberLabel.textColor = selectedTheme.secondaryColor
+                defaultSplitStepper.tintColor = selectedTheme.secondaryColor
+                self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+                switch selectedTheme.name {
+                case "yellow":
+                    selectThemeButton(yellowThemeButton)
+                    deselectThemeButton(greenThemeButton)
+                    deselectThemeButton(blueThemeButton)
+                case "green":
+                    selectThemeButton(greenThemeButton)
+                    deselectThemeButton(yellowThemeButton)
+                    deselectThemeButton(blueThemeButton)
+                case "blue":
+                    selectThemeButton(blueThemeButton)
+                    deselectThemeButton(greenThemeButton)
+                    deselectThemeButton(yellowThemeButton)
+                default:
+                    println("unknown theme name")
+                }
             }
         }
     }

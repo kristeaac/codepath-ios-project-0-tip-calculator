@@ -128,24 +128,28 @@ class TipViewController: UIViewController {
     }
     
     private func updateScreenTheme() {
-        var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
-        if selectedTheme != nil {
-            view.backgroundColor = selectedTheme.secondaryColor
-            billField.textColor = selectedTheme.primaryColor
-            fieldsView.backgroundColor = selectedTheme.primaryColor
-            tipLabel.textColor = selectedTheme.secondaryColor
-            totalLabel.textColor = selectedTheme.secondaryColor
-            tipLabelLabel.textColor = selectedTheme.secondaryColor
-            eachLabel.textColor = selectedTheme.secondaryColor
-            eachTextLabel.textColor = selectedTheme.secondaryColor
-            totalLabelLabel.textColor = selectedTheme.secondaryColor
-            tipControl.tintColor = selectedTheme.secondaryColor
-            settingsButtonItem.tintColor = selectedTheme.primaryColor
-            splitStepper.tintColor = selectedTheme.secondaryColor
-            splitLabel.textColor = selectedTheme.secondaryColor
-            splitNumberLabel.textColor = selectedTheme.secondaryColor
-            self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+        var savedTheme = SettingsHelper.getTheme()
+        if savedTheme != nil {
+            var selectedTheme = ThemeHelper.getTheme(SettingsHelper.getTheme())
+            if selectedTheme != nil {
+                view.backgroundColor = selectedTheme.secondaryColor
+                billField.textColor = selectedTheme.primaryColor
+                fieldsView.backgroundColor = selectedTheme.primaryColor
+                tipLabel.textColor = selectedTheme.secondaryColor
+                totalLabel.textColor = selectedTheme.secondaryColor
+                tipLabelLabel.textColor = selectedTheme.secondaryColor
+                eachLabel.textColor = selectedTheme.secondaryColor
+                eachTextLabel.textColor = selectedTheme.secondaryColor
+                totalLabelLabel.textColor = selectedTheme.secondaryColor
+                tipControl.tintColor = selectedTheme.secondaryColor
+                settingsButtonItem.tintColor = selectedTheme.primaryColor
+                splitStepper.tintColor = selectedTheme.secondaryColor
+                splitLabel.textColor = selectedTheme.secondaryColor
+                splitNumberLabel.textColor = selectedTheme.secondaryColor
+                self.navigationController?.navigationBar.tintColor = selectedTheme.primaryColor
+            }
         }
+        
     }
     
     private func defaultTipIndex() -> Int {
