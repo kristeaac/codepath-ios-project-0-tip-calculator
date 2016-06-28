@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] User can change theme colors
-- [X] User can specify how many people to split the bill by and save their default split preference
+- [X] User can specify how many people to split the bill with and save their default split preference
 
 ## Video Walkthrough 
 
