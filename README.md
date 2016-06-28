@@ -4,7 +4,7 @@
 
 Submitted by: **Kristy Caster**
 
-Time spent: **7** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -31,10 +31,6 @@ Here's a walkthrough of implemented user stories:
 <img src='demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
